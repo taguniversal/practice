@@ -17,7 +17,7 @@ defmodule PracticeWeb.Router do
   scope "/", PracticeWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    live "/", HomeLive, :index
   end
 
   # Other scopes may use custom stacks.

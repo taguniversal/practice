@@ -1,0 +1,27 @@
+<h1 class="text-4xl font-bold mb-6">Grind 75</h1>
+<table class="min-w-full bg-white border border-gray-200 shadow-md rounded-lg">
+  <thead>
+    <tr>
+      <th class="px-6 py-3 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">Exercises</th>
+    </tr>
+  </thead>
+  <tbody class="divide-y divide-gray-200">
+    <%= for exercise <- @exercises do %>
+      <tr>
+        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">
+       <button
+            phx-click="run-exercise"
+            phx-value-name={to_string(exercise)}
+            class="bg-blue-500 text-white font-bold py-1 px-2 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+          >
+            <%= to_string(exercise) %>
+          </button>
+        </td>
+      </tr>
+    
+       <%= format_benchmark(@two_sum) %>
+       
+    <% end %>
+   
+  </tbody>
+</table>

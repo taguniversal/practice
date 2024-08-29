@@ -13,6 +13,8 @@ defmodule Practice.Application do
       {Phoenix.PubSub, name: Practice.PubSub},
       # Start the Finch HTTP client for sending emails
       {Finch, name: Practice.Finch},
+      {Registry, keys: :unique, name: Registry.Exercises},
+      {Practice.Solution01_01, name: Practice.Solution01_01},
       # Start a worker by calling: Practice.Worker.start_link(arg)
       # {Practice.Worker, arg},
       # Start to serve requests, typically the last entry
